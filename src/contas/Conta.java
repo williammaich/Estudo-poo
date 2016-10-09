@@ -1,8 +1,21 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Classe Conta se tornou uma classe modelo para as outras 
+classes como Conta Comum e Conta Especial, assim 
+tornando elas como finais.
+
+No casso a classe conta é uma Classe raiz e as outras 
+usão a denominação extends que assim ela herda o construtor da
+classe conta.
+
+Utilização do protect é para que seja vista em qualquer pacote.
+
+As classes especiais tem o a sua forma de metodos que cabem a ela
+ou seja ela fica independente para ter o seu metodo proprio.
+
+poliformico - é para metodos que são modificados em cada
+classe.
  */
+
 package contas;
 
 import classes.Pessoa;
