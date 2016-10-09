@@ -14,6 +14,15 @@ ou seja ela fica independente para ter o seu metodo proprio.
 
 poliformico - é para metodos que são modificados em cada
 classe.
+
+
+Atributo de clase - para cada objeto do tipo conta os atributos de instancia representaram
+um valor diferente do outro.
+
+static - comprtilhado, no caso numero_contas sera compartilhado por todas as 
+instancias de conta.
+
+this(); - serve para chamar ou iniciar o construtor vazio.
  */
 
 package contas;
@@ -26,13 +35,17 @@ import classes.Pessoa;
  */
 public abstract class Conta {
     
+    //atributos de instancia
     protected int numero;
     protected Pessoa correntista;
     protected float saldo;
+    
+    //atributo de clase
     private static int numero_contas;
     
     public Conta(){
-        IncrementaContas();
+        IncrementaContas();// toda vez que criar um objeto do tipo conta
+        // ele chamara o incrementacontas.
     }
     
     public Conta(int numero, Pessoa correntista, float valor){
@@ -68,6 +81,10 @@ public abstract class Conta {
     
     public final void depositar(float valor){
         this.setSaldo(this.getSaldo() + valor);
+    }
+    
+    public int getNumeroContas(){
+        return this.numero_contas;
     }
    
     public abstract boolean sacar(float valor);
