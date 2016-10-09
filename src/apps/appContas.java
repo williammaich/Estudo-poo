@@ -28,7 +28,7 @@ public class appContas {
     pessoa, limite e valor;
     */
     public static void main(String[] args) {
-        Pessoa p1 = new Pessoa ("fulano", "fulano@gmail.com");
+        Pessoa p1 = new Pessoa ("Fulano", "fulano@gmail.com");
         ContaComum c1 = new ContaComum(123456,p1,150.00f );
         
         System.out.println("numero de contas instanciadas ate o momento: "+c1.getNumeroContas());
@@ -41,6 +41,8 @@ public class appContas {
         System.out.println("saque realizado");
     }else{
         System.out.println("impossivel");
+        System.out.println("nome do correntista: "+c1.getCorrentista());
+        
     }
     
     }   
