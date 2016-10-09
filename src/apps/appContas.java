@@ -6,6 +6,7 @@
 package apps;
 
 import classes.Pessoa;
+import contas.Conta;
 import contas.ContaComum;
 import contas.ContaEspecial;
 
@@ -35,6 +36,13 @@ public class appContas {
          ContaEspecial e1 = new ContaEspecial(123456,p1,2500.00f,5500.00f);
          
          System.out.println("numero de contas especial: "+e1.getNumeroContas());
+ 
+    if(c1.movimentar(1000.00f, Conta.SACAR)){
+        System.out.println("saque realizado");
+    }else{
+        System.out.println("impossivel");
+    }
+    
     }   
     
 }
